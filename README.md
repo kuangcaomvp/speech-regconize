@@ -42,4 +42,6 @@
         修改 config.py 中__C.PREDICT.pb = pb_file
     
     运行python decode.py 测试
-
+5 checkpoint模型地址
+链接：https://pan.baidu.com/s/1_CgXG3AvBDrXGTRr5_Rv8Q 
+提取码：ryqc 
