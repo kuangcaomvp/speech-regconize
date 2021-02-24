@@ -263,7 +263,9 @@ class Lm(object):
             dec = emb * (self.hidden_units**0.5) + positional_encoding(emb, self.pe)
 
             ## layer_nomal and Dropout
-            dec = normalize(dec)
+            #dec = normalize(dec)
+            dec = tf.contrib.layers.layer_norm(
+                    inputs=dec, begin_norm_axis=-1, begin_params_axis=-1, scope='Layer_Nomal')
             dec = tf.layers.dropout(dec,
                                         rate=self.dropout_rate_position,
                                         training=tf.convert_to_tensor(self.is_training))
